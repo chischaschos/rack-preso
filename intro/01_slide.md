@@ -7,19 +7,17 @@
 
 * > Rack provides a minimal interface between webservers supporting Ruby and Ruby frameworks.
 * Transparently integrates in your existing rails, sinatra apps
-* Helps you easily creates a middleware standalone application stack
-
-
-
-!SLIDE bullets incremental
-# Where does Rack sit? #
-TODO: Put a blocks or sequence diagram showing a request flow and where is Rack positioned among other components
+* Helps you easily create a middleware standalone application stack
 
 
 !SLIDE bullets incremental
-# What is middleware? #
-* > A software that talks to other softwares
-TODO: Improve this description
+# Yeah! but... what is Rack? #
+* A Rack application is a *Ruby object* **(not a class)** that responds to *call*. It takes exactly *one argument*, *the environment* and *returns* an *Array* of exactly *three values*: The *status*, the *headers*, and the *body*. 
+
+
+!SLIDE bullets incremental full-page
+# A basic Rack app diagram #
+![rack-app-class.png](rack-app-class.png)
 
 
 !SLIDE
@@ -31,33 +29,35 @@ TODO: Improve this description
     run app 
 
 
-!SLIDE
-# Wnat more?  #
-    @@@ ruby
-    module Rack
-      class Reverse
-        def initialize app 
-          @app = app 
-        end 
-       
-        def call env 
-          status, headers, body = @app.call env 
-          [status, headers, [body.first.reverse]]
-        end 
-      end 
-    end
-
-    use Rack::Reverse
-
-    app = lambda { |env| [200, { 'Content-Type' => 'text/html' }, 'Hello World'] }
-    run app 
+!SLIDE bullets incremental full-page
+# Where does Rack sit? #
+![rack image](rack-sample-diagram1.png)
 
 
 !SLIDE bullets incremental
-# What happened? #
-TODO: I need some sequence diagram to show a request flow
+# Rack is a full middleware stack #
+
+
+!SLIDE bullets incremental full-page
+# Allows a modular design  #
+![rack image](rack-sample-diagram2.png)
+
+![rack image](rack-sample-diagram3.png)
 
 
 !SLIDE bullets incremental
-# The Rack Spec #
-TODO: Show what we need to build a rack app
+# What is middleware? #
+* > Rack application that is *designed* to *run* in *conjunction* with another Rack application, which acts as the *endpoint*
+
+
+!SLIDE bullets incremental
+# ... #
+* Think of a Rack middleware as a filter *receiving* the Rack environment for the request from the previous *middleware*
+* Does some work with or on the *request's environment*
+* Then *calls* the *next middleware* in the chain
+
+
+!SLIDE bullets incremental
+# ... #
+* > The *last* Rack application in the chain is the *application itself*
+* *Any* middleware in the chain can *return the Rack response itself*, thus *preventing* the rest of the middlewares in the chain from *executing*
