@@ -33,7 +33,7 @@
 
 !SLIDE bullets incremental full-page
 # Where does Rack sit? #
-![rack image](rack-sample-diagram1.png)
+![rack image](rack-sample-diagram1.jpg)
 
 
 !SLIDE bullets incremental
@@ -42,13 +42,11 @@
 
 !SLIDE bullets incremental full-page
 # Allows a modular design  #
-![rack image](rack-sample-diagram2.png)
-
-![rack image](rack-sample-diagram3.png)
+![rack image](rack-sample-diagram2.jpg)
 
 
 !SLIDE bullets incremental
-# What is middleware? #
+# What a is middleware? #
 * > Rack application that is *designed* to *run* in *conjunction* with another Rack application, which acts as the *endpoint*
 
 

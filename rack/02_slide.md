@@ -83,8 +83,8 @@
 * > In *OOP*, the *decorator pattern* is a *design pattern* that allows *new/additional* *behaviour* to be added to an existing object *dynamically*
 
 
-!SLIDE bullets incremental
-* TODO: Ask Mendo help with this diagram
+!SLIDE bullets incremental full-page
+![decoration.jpg](decoration.jpg)
 
 
 !SLIDE bullets incremental

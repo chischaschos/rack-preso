@@ -181,7 +181,7 @@
     run RailsRackApp::Application.routes
 
 
-!SLIDE 
+!SLIDE  commandline incremental
 ## 1.4 Testing our middleware ##
 ### Look at *X-Averageruntime:* header ###
     ...$ curl -I localhost:3000
@@ -197,4 +197,43 @@
 
 !SLIDE bullets incremental small
 ## 2.1 - Routing to a rack application  ##
-### lib/average_time.rb  ###
+### lib/walking_arrow.rb  ###
+    @@@ ruby
+    class WalkingArrow
+
+      ARROW = '=>'
+      @@spaces = 0
+
+      def call(env)
+        @@spaces += 1
+        [200, {'Content-Type' => 'text/plain'}, [" "*@@spaces + ARROW + "\n"]]
+      end
+    end
+
+
+!SLIDE bullets incremental small
+## 2.2 - Add a route  ##
+### lib/walking_arrow.rb  ###
+    @@@ ruby
+    require 'lib/walking_arrow.rb'
+    RailsRackApp::Application.routes.draw do
+      get 'home/index'
+      get 'walkingarrow' => WalkingArrow.new
+    end
+
+
+!SLIDE  commandline incremental
+## 2.3 Testing our middleware ##
+### Walk!!! ###
+    ...$ curl localhost:3000/walkingarrow
+     =>
+    ...$ curl localhost:3000/walkingarrow
+      =>
+    ...$ curl localhost:3000/walkingarrow
+       =>
+    ...$ curl localhost:3000/walkingarrow
+        =>
+    ...$ curl localhost:3000/walkingarrow
+         =>
+    ...$ curl localhost:3000/walkingarrow
+          =>
