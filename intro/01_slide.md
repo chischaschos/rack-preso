@@ -46,7 +46,7 @@
 
 
 !SLIDE bullets incremental
-# What a is middleware? #
+# What is a *middleware*? #
 * > Rack application that is *designed* to *run* in *conjunction* with another Rack application, which acts as the *endpoint*
 
 
