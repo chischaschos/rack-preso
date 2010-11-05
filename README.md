@@ -1,7 +1,13 @@
 # Rack's Crowd Interactive Live Session #
 
 ## Purpose ##
-Introduce Rack concept, its usage and how it fits in most famous ruby frameworks
+Introduce Rack concept and its usage
+
+## Heroku preso URL ##
+[http://rack-crowdit-livesession.heroku.com/](http://rack-crowdit-livesession.heroku.com/)
+
+## Examples at ##
+*rack-testing* folder
 
 ## About ##
 This is [showoff presentation](http://github.com/schacon/showoff) presentation, about [Rack: Ruby webserver interface](http://rack.rubyforge.org/)
