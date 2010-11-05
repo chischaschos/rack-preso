@@ -1,1 +1,9 @@
-{ "name": "Your best friend Rack", "sections": [ {"section":"intro"}, {"section":"rack"}, {"section":"rails"} ]}
+{ "name": "Your best friend Rack", 
+  "sections": [ 
+    {"section":"intro"}, 
+    {"section":"rack"}, 
+    {"section":"rack-test"},
+    {"section":"rails"} ,
+    {"section":"conclusion"} 
+  ]
+}

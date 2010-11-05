@@ -12,7 +12,7 @@
 
 !SLIDE bullets incremental
 # Yeah! but... what is Rack? #
-* A Rack application is a *Ruby object* **(not a class)** that responds to *call*. It takes exactly *one argument*, *the environment* and *returns* an *Array* of exactly *three values*: The *status*, the *headers*, and the *body*. 
+* A Rack application is a *Ruby object* that responds to *call*. It takes exactly *one argument*, *the environment* and *returns* an *Array* of exactly *three values*: The *status*, the *headers*, and the *body*. 
 
 
 !SLIDE bullets incremental full-page
@@ -21,10 +21,12 @@
 
 
 !SLIDE
-# Minimum server interfaces you said? #
+# Minimum server interface you said? #
     @@@ ruby
     app = lambda do |env| 
-      [200, { 'Content-Type' => 'text/html' }, 'Hello World']
+      [200, 
+        { 'Content-Type' => 'text/html' }, 
+       'Hello World']
     end
     run app 
 
