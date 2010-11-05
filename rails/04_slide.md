@@ -101,7 +101,7 @@
      => "I'm yout home controller's body" 
 
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental small
 # There are *two* different ways to install *Rack components* into your Rails *application* #
 * 1 - Either *configure* your Rack application as *part of* your *application's middleware stack*
 * 2 - Or you can *route URI paths* directly to the *Rack application* *from you application's routes*
