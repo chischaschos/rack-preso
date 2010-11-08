@@ -4,7 +4,7 @@
 Introduce Rack concept and its usage
 
 ## Heroku preso URL ##
-[http://rack-crowdit-livesession.heroku.com/](http://rack-crowdit-livesession.heroku.com/)
+[http://rack-preso.heroku.com/](http://rack-preso.heroku.com/)
 
 ## Examples at ##
 *examples* folder
