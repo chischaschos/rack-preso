@@ -17,6 +17,6 @@
 
 
 !SLIDE bullets incremental
-# This preso references #
-* github preso repo and examples [https://github.com/chischaschos/rack-crowdit-livesession](https://github.com/chischaschos/rack-crowdit-livesession)
-* And my rack client frontend project [https://github.com/chischaschos/ci_admin_sys](https://github.com/chischaschos/ci_admin_sys) on *client* folder
+# References #
+* [github repo and examples](https://github.com/chischaschos/rack-crowdit-livesession)
+* [chischaschos twitter](http://twitter.com/chischaschos)
